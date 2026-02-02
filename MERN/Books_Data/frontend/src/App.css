@@ -1,0 +1,155 @@
+*{
+  margin: 0px;
+  padding:0px ;
+  outline: none;
+}
+.nav{
+  width: 100%;
+  height: 10vh;
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav a{
+  color: orangered;
+  text-decoration: none;
+}
+
+
+
+/* Container */
+.con {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  background-color: #f5f5f5;
+}
+
+/* Card */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+.card h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Description */
+.card p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Price */
+.card h3 {
+  margin: 12px 0;
+  font-size: 18px;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+/* Rating alignment */
+.card .MuiRating-root {
+  margin-top: 8px;
+}
+
+
+
+.form {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Message text */
+.form div {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Inputs & textarea */
+.form input,
+.form textarea,
+.form select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form textarea {
+  resize: none;
+}
+
+/* Focus effect */
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+
+/* Dropdown default text */
+.form select option[disabled] {
+  color: #888;
+}
+
+/* Rating alignment */
+.form .MuiRating-root {
+  align-self: flex-start;
+}
+
+/* Button */
+.form button {
+  padding: 12px;
+  background-color: #1976d2;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.form button:hover {
+  background-color: #125aa0;
+}
+
+.form button:active {
+  transform: scale(0.97);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .form {
+    margin: 20px;
+    padding: 20px;
+  }
+}
