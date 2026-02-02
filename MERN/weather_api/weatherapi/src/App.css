@@ -1,0 +1,116 @@
+/* Page layout */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  min-height: 100vh;
+}
+
+/* Main container */
+div {
+   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Input field */
+input {
+  width: 280px;
+  height: 42px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+input:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+}
+
+/* Button */
+button {
+  height: 42px;
+  padding: 0 25px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Weather card */
+.tempcard {
+  width: 320px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px 22px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn 0.6s ease;
+}
+
+/* Text inside card */
+.tempcard p {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+
+/* Error message */
+div > div {
+  margin-top: 15px;
+  color: #ff4d4d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  input {
+    width: 90%;
+  }
+
+  .tempcard {
+    width: 90%;
+  }
+
+  button {
+    width: 90%;
+  }
+}
