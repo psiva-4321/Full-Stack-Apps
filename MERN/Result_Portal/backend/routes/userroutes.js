@@ -1,0 +1,12 @@
+let express = require("express")
+const { add, login, gethno, getdet, updmarks, getdata, del, search } = require("../controllers/usercont")
+let rt = new express.Router()
+rt.post("/reg", add)
+rt.post("/login", login)
+rt.get("/gethno", gethno)
+rt.get("/getdet/:hno", getdet)
+rt.put("/updmarks", updmarks)
+rt.get("/getdata", getdata)
+rt.delete("/del/:uid", del)
+rt.get("/search/:data", search)
+module.exports = rt

@@ -1,0 +1,12 @@
+let express = require("express")
+let mongoose = require("mongoose")
+let cors = require("cors")
+const rt = require("./routes/userroutes")
+mongoose.connect("mongodb://localhost:27017/v25hfs1rsdb").then(() => {
+    console.log("ok")
+})
+let app = express()
+app.use(express.json())
+app.use(cors())
+app.use("/", rt)
+app.listen(5000)

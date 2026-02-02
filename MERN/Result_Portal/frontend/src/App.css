@@ -1,0 +1,462 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar container */
+.nav {
+  width: 100%;
+  height: 10vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar links */
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Active link (optional) */
+.nav a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive navbar */
+@media (max-width: 600px) {
+  .nav {
+    height: auto;
+    flex-direction: column;
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .nav a {
+    font-size: 15px;
+  }
+}
+
+/* Center the form on the page */
+.form {
+  width: 350px;
+  margin: 80px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Heading / message */
+.form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Input fields */
+.form input {
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.form input:focus {
+  border-color: #007bff;
+}
+
+/* Button */
+.form button {
+  height: 42px;
+  background-color: #007bff;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .form {
+    width: 90%;
+  }
+}
+
+.con {
+  margin: 100px auto;
+  width: 70%;
+  min-width: 300px;
+  background-color: darkgrey;
+  color: darkviolet;
+  font-size: 15px;
+  padding: 20px;
+}
+
+
+
+/* Container */
+.table-container {
+  width: 90%;
+  margin: 40px auto;
+  overflow-x: auto;
+}
+
+/* Loading text */
+.loading {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table header */
+table th {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 12px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Table rows */
+table td {
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Zebra striping */
+table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Hover effect */
+table tr:hover {
+  background-color: #eef2ff;
+}
+
+/* Delete button */
+table button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.3s ease;
+}
+
+table button:hover {
+  background-color: #b52a37;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  table th,
+  table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+/* Card form container – enhanced spacing */
+.card-form {
+  width: 400px;
+  margin: 70px auto;
+  padding: 32px 28px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 22px; /* MORE breathing space */
+}
+
+/* Headings / messages */
+.card-form h2 {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  color: #2d6cdf;
+  margin-bottom: 5px;
+}
+
+/* Inputs & select – airy feel */
+.card-form input,
+.card-form select {
+  height: 44px;
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+/* Focus effect */
+.card-form input:focus,
+.card-form select:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.15);
+}
+
+/* Inner info / details section */
+.card-form .details {
+  background-color: #f9fafc;
+  padding: 18px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-left: 4px solid #2575fc;
+}
+
+/* Text */
+.card-form p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Label styling */
+.card-form label {
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Readonly input */
+.card-form input[readonly] {
+  background-color: #eef1f6;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Buttons – bold & clear */
+.card-form button {
+  height: 46px;
+  margin-top: 8px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.card-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 18px rgba(37, 117, 252, 0.4);
+}
+
+/* Disabled button (optional) */
+.card-form button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .card-form {
+    width: 92%;
+    padding: 26px 20px;
+  }
+}
+
+
+/* Search page container */
+.search-card {
+  width: 420px;
+  margin: 60px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Error / info message */
+.search-card h2 {
+  text-align: center;
+  font-size: 16px;
+  color: red;
+}
+
+/* Search input */
+.search-card input {
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search-card input:focus {
+  border-color: #2575fc;
+}
+
+/* Search button */
+.search-card button {
+  height: 40px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.search-card button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #5b0fc2, #1f63e0);
+}
+
+/* Result card */
+.result-card {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #2575fc;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Result text */
+.result-card p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .search-card {
+    width: 90%;
+  }
+}
+
+/* Hallticket container (PDF friendly) */
+.hallticket-card {
+  width: 420px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border: 2px solid #2575fc;
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Hallticket title (optional) */
+.hallticket-card::before {
+  content: "HALL TICKET";
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #2575fc;
+  margin-bottom: 10px;
+}
+
+/* Hallticket text */
+.hallticket-card p {
+  font-size: 14px;
+  color: #333;
+  padding: 6px 10px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+}
+
+/* Download button */
+.download-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 25px;
+  font-size: 14px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #5b0fc2, #1f63e0);
+}
+
+/* Print / PDF optimization */
+@media print {
+  .download-btn {
+    display: none;
+  }
+
+  body {
+    background: white;
+  }
+
+  .hallticket-card {
+    box-shadow: none;
+    border: 2px solid black;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .hallticket-card {
+    width: 90%;
+  }
+}
