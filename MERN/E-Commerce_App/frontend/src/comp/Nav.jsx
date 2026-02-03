@@ -15,7 +15,7 @@ const Nav = () => {
         </>
       ) : (
         <>
-          <Link to="/cart">Cart</Link>
+          <Link to="/cart">Cart<button>{obj.state.count}</button></Link>
           {obj.state.role == "admin" && <Link to="/addprod">Add Product</Link>}
 
           <Link to="/logout">Logout</Link>

@@ -3,7 +3,7 @@ import React, { useContext, useEffect ,useState} from "react";
 import Ct from "./Ct.jsx";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
-
+import { set } from "mongoose";
 const All = () => {
   let [prods, setProds] = useState([])
   let obj=useContext(Ct);
@@ -29,6 +29,14 @@ const All = () => {
       let pdata={"uid":obj.state.uid,"pid":item._id,"title":item.title,"price":item.price,"img":item.img}
 axios.post("http://localhost:5000/addcart",pdata).then((res)=>{
 setMsg(res.data.msg)
+if(res.data.count!=undefined)
+{
+obj.updstate({"count":res.data.count})
+ let x=Cookies.get("logininfo")
+  let y=JSON.parse(x)
+  Cookies.set("logininfo",JSON.stringify({...y,"count":res.data.count}))
+}
+
 setF(true)
 setTimeout(()=>{
   setF(false)
@@ -45,7 +53,7 @@ setTimeout(()=>{
         <h3>{item.title}</h3>
       <p>Cat:{item.cat}</p>
       <p>Price:{item.price}</p>
-      <button>Know More</button>
+      <button onClick={()=>navigate(`/km/${item._id}`)}>Know More</button>
       <button onClick={()=>add(item)}>Add to Cart</button>
      {obj.state.role=="admin"&&<><button>Edit</button>
       <button>Delete</button></>}

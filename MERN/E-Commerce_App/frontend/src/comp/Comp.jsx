@@ -3,7 +3,7 @@ import React, { useContext, useEffect ,useState} from "react";
 import Ct from "./Ct.jsx";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
-
+import { set } from "mongoose";
 const Comp = () => {
   let [prods, setProds] = useState([])
   let obj=useContext(Ct);

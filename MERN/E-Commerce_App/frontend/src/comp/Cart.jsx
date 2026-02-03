@@ -14,9 +14,10 @@ const Cart = () => {
     let x=Cookies.get("logininfo")
     if(x!=undefined){
       let y=JSON.parse(x)
-      obj.updstate(y)
       axios.get(`http://localhost:5000/getcartitems/${y.uid}`).then((res)=>{
         setCart(res.data)
+        obj.updstate({...y,"count":res.data.length})
+        Cookies.set("logininfo",JSON.stringify({...y,"count":res.data.length}))
 
       })
     }
