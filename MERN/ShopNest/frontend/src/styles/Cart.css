@@ -1,0 +1,116 @@
+/* ===== Cart Container ===== */
+.cartcon {
+  width: 80%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== Cart Item ===== */
+.cartitem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+/* ===== Product Image ===== */
+.cartitem img {
+  width: 120px;
+  height: auto;          /* full image */
+  object-fit: contain;   /* no cropping */
+  border-radius: 6px;
+}
+
+/* ===== Info Section ===== */
+.cartitem .info {
+  flex: 1;
+}
+
+.cartitem .info h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.cartitem .info p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* ===== Quantity Buttons ===== */
+.cartitem .info button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  cursor: pointer;
+  margin: 0 8px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.cartitem .info button:hover {
+  background: #ddd;
+}
+
+/* ===== Remove Button ===== */
+.cartitem > button {
+  padding: 6px 12px;
+  border: 1px solid red;
+  background: white;
+  color: red;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cartitem > button:hover {
+  background: red;
+  color: white;
+}
+
+/* ===== Cart Total Section ===== */
+.carttotal {
+  width: 80%;
+  margin: 30px auto;
+  padding: 15px;
+  border-top: 2px solid #e5e5e5;
+  text-align: right;
+}
+
+.carttotal h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ===== Empty Cart Text ===== */
+h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .cartcon {
+    width: 95%;
+  }
+
+  .cartitem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cartitem img {
+    width: 100%;
+  }
+
+  .carttotal {
+    width: 95%;
+    text-align: center;
+  }
+}
